@@ -14,7 +14,7 @@ function SignUp() {
             navigate('/')
         }
         
-    }, [])
+    })
 
     const handleSubmit = () => {
         if(!name){
