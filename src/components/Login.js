@@ -17,8 +17,15 @@ function Login() {
     }, [])
 
 
-    const handleSubmit = () => {
- 
+    const handleSubmit = () => { 
+        if(!email){
+            toast.error("Please Enter Email");
+            return
+        }
+        if(!password){
+            toast.error("Please Enter Password");
+            return
+        }
         axios.post('https://redblink-backend-task.onrender.com/login',
             {
                 email: email,
