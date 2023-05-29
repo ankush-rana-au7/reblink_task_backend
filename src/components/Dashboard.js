@@ -12,7 +12,7 @@ function Dashboard() {
             navigate('/login')
         }
         
-        
+
     }, [])
 
     return (
@@ -21,6 +21,7 @@ function Dashboard() {
             <span>Hello {localStorage.getItem('NAME')}</span>
             <div>
                 <span> {localStorage.getItem('EMAIL')} </span>
+                
                 <button
                     onClick={() => {
                         localStorage.clear()
