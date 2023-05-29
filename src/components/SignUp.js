@@ -15,8 +15,21 @@ function SignUp() {
         }
         
     }, [])
+
     const handleSubmit = () => {
-        axios.post('http://localhost:5000/SignUp',
+        if(!name){
+            toast.error("Please Enter Name");
+            return
+        }
+        if(!email){
+            toast.error("Please Enter Email");
+            return
+        }
+        if(!password){
+            toast.error("Please Enter Password");
+            return
+        }
+        axios.post('https://redblink-backend-task.onrender.com/SignUp',
             {
                 name:name,
                 email: email,
@@ -42,6 +55,7 @@ function SignUp() {
         <div className="outcard">
         Name
             <input
+            required
                 onChange={(e) => {
                     setName(e.target.value)
                 }}
@@ -50,6 +64,7 @@ function SignUp() {
                 type="text" /> <br />
             Email
             <input
+            required
                 onChange={(e) => {
                     setEmail(e.target.value)
                 }}
@@ -58,6 +73,7 @@ function SignUp() {
                 type="email" /> <br /> <br />
             Password
             <input
+            required
                 onChange={(e) => {
                     setPassword(e.target.value)
                 }}
