@@ -14,7 +14,7 @@ function Login() {
             navigate('/dashboard')
         }
         
-    }, [])
+    })
 
 
     const handleSubmit = () => { 
