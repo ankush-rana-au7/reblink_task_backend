@@ -18,7 +18,7 @@ import Dashboard from './components/Dashboard';
 function App() {
 
   return (
-    <div>
+    <div className="App">
       <Router>
         <Routes>
           <Route path="/signup" element={<SignUp />} />

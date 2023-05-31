@@ -16,7 +16,11 @@ function Dashboard() {
     }, [])
 
     return (
-        <div className="card">
+        <div className="card" style ={{ textAlign: "center",
+            display: "flex",
+            minHeight: "100vh",
+            alignItems: "center",
+            justifyContent: "center",}}>
             <div>Dashboard</div>
             <span>Hello {localStorage.getItem('NAME')}</span>
             <div>

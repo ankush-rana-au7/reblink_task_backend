@@ -53,33 +53,36 @@ function Login() {
             });
         }
 
-    return (<>
-        <h1 className="center"> Login </h1>
-        <div className="outcard">
-            Email
-            <input
-                onChange={(e) => {
+    return (
+     <div className="auth-form-container">
+            <h2>Login</h2>
+            <div className="login-form" >
+                <label htmlFor="email">Email</label>
+                <input onChange={(e) => {
                     setEmail(e.target.value)
                 }}
                 value={email}
                 className="inputs"
-                type="email" /> <br /> <br />
-            Password
-            <input
-                onChange={(e) => {
+                type="email"
+                placeholder="youremail@gmail.com"
+                id="email" 
+                name="email" />
+
+                <label htmlFor="password">Password</label>
+                <input  onChange={(e) => {
                     setPassword(e.target.value)
                 }}
                 value={password}
-                className="inputs" type="password" /> <br /> <br />
-            <button
-                onClick={handleSubmit}
-                className="btns"> SUBMIT </button>
-            <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
+                type="password" 
+                placeholder="********"
+                id="password" 
+                name="password" />
+
+                <button type="submit" onClick={handleSubmit}>Log In</button>
+                <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
                 to={'/signup'}> SIGN UP </Link>
-            {/* <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
-                to={'/forget-pass'}> Forget Password </Link> */}
-        </div>
-    </>
+            </div>
+            </div>
     )
 }
 
